@@ -1,6 +1,11 @@
 package chapter_array_linkedlist;
 
-import java.sql.SQLOutput;
+/**
+ * @author weizheng ma
+ * @email 15101093126@163.com
+ * @date 2023/2/25 18:38
+ **/
+
 import java.util.Arrays;
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -63,9 +68,25 @@ public class array {
         nums = extend(nums,4);
         System.out.println("拓展后的数组nums:"+Arrays.toString(nums));
 
-        
+        //插入元素
+        insert(nums,6,6);
+        System.out.println("数组nums:" + Arrays.toString(nums));
+
+        //删除索引为1的元素
+        remove(nums,1);
+        System.out.println("数组nums:" + Arrays.toString(nums));
+
+        //查看4是否在数组nums中
+        int num = 7 ;
+        int n = find(nums,num);
+        if (n == -1)
+            System.out.println(num + "不在数组nums"+Arrays.toString(nums));
+        else
+            System.out.println(num + "在数组nums"+ Arrays.toString(nums)+"的索引为"+n);
+
+
+
 
     }
-
 
 }
